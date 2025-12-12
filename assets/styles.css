@@ -108,3 +108,20 @@ h1{margin:10px 0 8px; font-size: 34px; line-height:1.15}
 
 .footer{margin-top:28px; color: var(--muted); font-size: 13px}
 .small{font-size: 13px; color: var(--muted)}
+code{font-family: var(--mono); font-size: 0.95em}
+
+/* Performance gallery */
+.gallery{
+  display:grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+@media (max-width: 860px){ .gallery{ grid-template-columns: 1fr; } }
+.figure{
+  border:1px solid var(--line);
+  background: rgba(255,255,255,0.04);
+  border-radius: var(--radius);
+  overflow:hidden;
+}
+.figure img{display:block; width:100%; height:auto}
+.figure .cap{padding:10px 12px; color:var(--muted); font-size: 13px}
